@@ -1,48 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-
-  <Identity
-    Name="424cbe5e-5c18-412c-9050-03f74a916975"
-    Version="1.0.0.0"
-    Publisher="CN=HiYelboy" />
-
+  <Identity Name="60337Walley.SudokuSolver" Version="0.0.1.2" Publisher="CN=E8DE1BA2-D4F3-4E77-9236-C71CC313E271" />
   <Properties>
-    <DisplayName>Sudoku Solver</DisplayName>
-    <PublisherDisplayName>HiYelboy</PublisherDisplayName>
+    <DisplayName>SudokuSolver</DisplayName>
+    <PublisherDisplayName>Walley</PublisherDisplayName>
     <Logo>images\storelogo.png</Logo>
   </Properties>
-
   <Prerequisites>
     <OSMinVersion>6.2.1</OSMinVersion>
     <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
   </Prerequisites>
-
   <Resources>
     <Resource Language="x-generate" />
   </Resources>
-
   <Applications>
-    <Application 
-      Id="App"
-      StartPage="default.html">
-
-      <VisualElements
-        DisplayName="Sudoku Solver"
-        Logo="images\logo.png"
-        SmallLogo="images\smalllogo.png"
-        Description="Sudoku Solver"
-        ForegroundText="light"
-        BackgroundColor="#464646">
-
-        <DefaultTile ShowName="allLogos" />
+    <Application Id="App" StartPage="default.html">
+      <VisualElements DisplayName="SudokuSolver" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="Sudoku Solver, which can help u solve sudoku" ForegroundText="light" BackgroundColor="#464646">
+        <DefaultTile ShowName="allLogos" ShortName="Sudoku Solver" />
         <SplashScreen Image="images\splashscreen.png" />
-
+        <InitialRotationPreference>
+          <Rotation Preference="landscape" />
+        </InitialRotationPreference>
       </VisualElements>
     </Application>
   </Applications>
-
-  <Capabilities>
-    <Capability Name="internetClient" />
-  </Capabilities>
-
 </Package>

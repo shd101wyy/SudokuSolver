@@ -47,7 +47,9 @@
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <TargetPlatformVersion>8.0</TargetPlatformVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
-    <PackageCertificateKeyFile>Sudoku Solver_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>SudokuSolver_StoreKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <PackageCertificateThumbprint>0BEDF928C45DEDA54D48D646262EBCDECA85B19F</PackageCertificateThumbprint>
   </PropertyGroup>
   <ItemGroup>
     <AppxManifest Include="package.appxmanifest">
@@ -64,6 +66,8 @@
     <Content Include="js\main.js" />
     <Content Include="js\raphael.js" />
     <Content Include="js\sudoku.js" />
+    <None Include="SudokuSolver_StoreKey.pfx" />
+    <None Include="Package.StoreAssociation.xml" />
     <None Include="Sudoku Solver_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
