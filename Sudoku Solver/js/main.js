@@ -84,7 +84,7 @@ var drawSelectionsPanel = function (n, block, x, y) {
     CURRENT_CHOSEN_BLOCK = block; // set current chosen block
 
     // draw close
-    var left = x;
+    var left = x + b_width;
     var top = y;
     var r = paper.rect(left, top, b_width, b_width);
     r.attr({ "fill": "#f04848", "stroke": "#454545", "stroke-width": 5, "stroke-linecap": "round" });
@@ -95,6 +95,17 @@ var drawSelectionsPanel = function (n, block, x, y) {
         clearSelection();
         // console.log("Clear Selections");
     })
+
+    // draw clear
+    left = x;
+    top = y;
+    r = paper.rect(left, top, b_width, b_width);
+    r.attr({ "fill": "#f04848", "stroke": "#454545", "stroke-width": 5, "stroke-linecap": "round" });
+    drawTextInBlock(left, top, b_width, b_width, "_", r);
+    selections.push(r);
+    r.click(function () {
+        CURRENT_CHOSEN_BLOCK.text_object.attr({"text":""});
+    });
 
     for (var a = 0; a < n; a++) {
         // draw each selection
@@ -107,7 +118,7 @@ var drawSelectionsPanel = function (n, block, x, y) {
     }
 
     // add click event
-    for (var i = 1; i < selections.length; i++) {
+    for (var i = 2; i < selections.length; i++) {
         selections[i].click(function () {
             CURRENT_CHOSEN_BLOCK.text_object.attr({ "text": this.text_object.attr("text") });
             // console.log(this.text_object.attr("text"))                    
@@ -242,7 +253,8 @@ var drawSudoku = function (x, y, width, n) {
             r = board[i][j];
             r.click(function () {
                 if (CAN_CHANGE === false) return;
-                this.original_fill_color = this.attr("fill");
+                if (this == CURRENT_CHOSEN_BLOCK) return;
+                this.original_fill_color = "#9460e6";
                 this.attr({ "fill": "#454545" });
                 // this.text_object.attr({"text":"=>"});
                 drawSelectionsPanel(n * n, this, x + width + 5, y);
