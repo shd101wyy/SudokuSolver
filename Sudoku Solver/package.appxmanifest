@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="60337Walley.SudokuSolver" Version="0.0.1.2" Publisher="CN=E8DE1BA2-D4F3-4E77-9236-C71CC313E271" />
+  <Identity Name="60337Walley.SudokuSolver" Version="0.0.1.4" Publisher="CN=E8DE1BA2-D4F3-4E77-9236-C71CC313E271" />
   <Properties>
     <DisplayName>SudokuSolver</DisplayName>
     <PublisherDisplayName>Walley</PublisherDisplayName>
